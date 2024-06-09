@@ -23,7 +23,7 @@ with st.form(key='my_form'):
         st.markdown('##### :smile: 간단하게 체크해 보자!')
         prediction = st.radio(
         "", 
-        ["**불꽃반응**", "**앙금 생성 반응**"])
+        ["불꽃반응", "앙금 생성 반응"])
 
         submitted = st.form_submit_button("나의 결과는?")
 if submitted:
