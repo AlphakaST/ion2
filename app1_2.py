@@ -11,7 +11,7 @@ image = Image.open('header2.jpg')
 st.image(image)
 st.subheader("")
 st.title(":bookmark_tabs: 프로젝트명: 앙금 생성 반응 확인하기")
-st.header(':ballot_box_with_check: Mission: 이온 모형으로 반응 이해하기'=)
+st.header(':ballot_box_with_check: Mission: 이온 모형으로 반응 이해하기')
 st.divider()
 
 # 먼저, 이온 개념과 모형 내용 설명하기
