@@ -51,10 +51,20 @@ example_answers = {
 
 with st.form(key="Feedback_form"):
     student_id = st.text_input("**학번을 입력하세요**", placeholder="예: 1학년 1반 5번 -> 10105, 1학년 1반 30번 -> 10130)")
+
+    st.image("number1.jpg", caption="문제1", use_column_width=True)
     answer1 = st.text_area("**1. 그림은 원자와 이온을 모형으로 나타낸 것이다. (가)~(다)를 원자, 양이온, 음이온으로 구분하고, 그 까닭을 (+)전하의 총량과 (-)전하의 총량으로 비교하여 설명하시오.**")
+
+    st.image("number2.jpg", caption="문제2", use_column_width=True)
     answer2 = st.text_area("**2. 그래프는 어떤 원자 A-C가 이온이 될 때 얻거나 잃은 전자수를 나타낸 것이다(단, 그래프에 나타낸 이온은 안정하며, A-C는 임의의 원소 기호이다.). A 원자의 원자핵이 띠는 전하의 총량이 +4일 때, A 이온의 이온식을 실제 원소 기호를 이용하여 나타내고, 남아 있는 전자의 개수를 쓰시오. 그리고 B 이온과 C 이온을 이온식으로 표현하시오.**")
+
+    st.image("number3.jpg", caption="문제3", use_column_width=True)
     answer3 = st.text_area("**3. (가)와 (나) 중 간이 전기 전도계를 수용액에 각각 담갔을 때 불이 들어오는 수용액을 고르고, 그 까닭을 설명하시오.**")
+
+    st.image("number4.jpg", caption="문제4", use_column_width=True)
     answer4 = st.text_area("**4. 그림은 염화 나트륨 수용액과 미지 수용액의 반응을 모형으로 나타낸 것이다. X 수용액에 녹아 있는 물질의 이름을 쓰고, 그 까닭을 설명하시오.**")
+
+    st.image("number5.jpg", caption="문제5", use_column_width=True)
     answer5 = st.text_area("**5. 표는 미지의 수용액을 구별하기 위해 실험한 결과이다. X 수용액은 무엇인지 쓰고, 그 까닭을 서술하시오. 그리고 흰색 앙금이 생긴 후에도 실험한 수용액에 전기 전도계를 담갔을 때 전기가 통하는지 쓰고, 그 까닭을 서술하시오.**")
 
     submit_button = st.form_submit_button(label='제출하기')
@@ -62,7 +72,7 @@ with st.form(key="Feedback_form"):
     if submit_button:
         if len(student_id) != 5 or not student_id.isdigit():
             st.error("학번은 5자리 숫자로 입력해야 합니다. 다시 시도해 주세요.")
-        elif not (answer1 and answer2 and answer3 and answer4 and answer5):
+        elif not (answer1.strip() and answer2.strip() and answer3.strip() and answer4.strip() and answer5.strip()):
             st.error("모든 문항에 답변을 입력해 주세요.")
         else:
             feedbacks = []
@@ -131,4 +141,3 @@ with st.form(key="Feedback_form"):
 
 cursor.close()
 conn.close()
-
