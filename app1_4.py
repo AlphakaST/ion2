@@ -3,7 +3,7 @@ import pandas as pd
 import mysql.connector
 
 st.set_page_config(
-      page_title="앙금 생성 반응",
+      page_title="교사용 대시보드",
       page_icon="./alpaca.jpg",
       layout="wide"
 )
