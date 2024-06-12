@@ -127,15 +127,15 @@ with st.form(key="Feedback_form"):
             # cursor.execute("DELETE FROM student_responses_2")  # 기존 데이터 삭제
             # conn.commit()
 
-            for row in updated_data.itertuples(index=False):
-                cursor.execute(
-                    """
-                    INSERT INTO student_responses_2 (student_id, number1, number2, number3, number4, number5, feedback1, feedback2, feedback3, feedback4, feedback5)
-                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
-                    """,
-                    row
-                )
-            conn.commit()
+            # for row in updated_data.itertuples(index=False):
+            #     cursor.execute(
+            #         """
+            #         INSERT INTO student_responses_2 (student_id, number1, number2, number3, number4, number5, feedback1, feedback2, feedback3, feedback4, feedback5)
+            #         VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+            #         """,
+            #         row
+            #     )
+            # conn.commit()
 
             st.success("답안이 성공적으로 제출되었습니다!")
 
