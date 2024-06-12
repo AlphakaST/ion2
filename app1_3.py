@@ -61,10 +61,10 @@ with st.form(key="Feedback_form"):
     st.image("number3.jpg", caption="문제3", use_column_width=True)
     answer3 = st.text_area("**3. (가)와 (나) 중 간이 전기 전도계를 수용액에 각각 담갔을 때 불이 들어오는 수용액을 고르고, 그 까닭을 설명하시오.**")
 
-    st.image("number4.jpg", caption="문제4", width=Image.open("number4.jpg").width // 2)
+    st.image("number4.jpg", caption="문제4", use_column_width=True)
     answer4 = st.text_area("**4. 그림은 염화 나트륨 수용액과 미지 수용액의 반응을 모형으로 나타낸 것이다. ? 수용액에 녹아 있는 물질의 이름을 쓰고, 그 까닭을 설명하시오.**")
 
-    st.image("number5.jpg", caption="문제5", width=Image.open("number5.jpg").width // 2)
+    st.image("number5.jpg", caption="문제5", use_column_width=True)
     answer5 = st.text_area("**5. 표는 미지의 수용액을 구별하기 위해 실험한 결과이다. X 수용액은 무엇인지 쓰고, 그 까닭을 서술하시오. 그리고 흰색 앙금이 생긴 후에도 실험한 수용액에 전기 전도계를 담갔을 때 전기가 통하는지 쓰고, 그 까닭을 서술하시오.**")
 
     submit_button = st.form_submit_button(label='제출하기')
